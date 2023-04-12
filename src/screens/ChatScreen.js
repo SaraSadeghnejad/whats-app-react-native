@@ -6,7 +6,7 @@ import ChatListItem from '../components/ChatListItem'
 const ChatScreen = () => {
   return (
     <View>
-      <FlatList data={chats} renderItem={({item}) =><ChatListItem chat={item} />} />
+      <FlatList data={chats} renderItem={({item}) =><ChatListItem chat={item} />} style={{backgroundColor:"white"}} />
     </View>
   )
 }

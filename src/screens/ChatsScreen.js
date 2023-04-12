@@ -7,7 +7,15 @@ import Message from '../components/Message'
 import { KeyboardAvoidingView } from 'react-native'
 import { Platform } from 'react-native'
 import InputBox from '../components/InputBox'
+import { useNavigation, useRoute } from '@react-navigation/native'
 const ChatsScreen = () => {
+    const route = useRoute();
+    const navigation= useNavigation();
+    useEffect(() => {
+        navigation.setOptions({title: route.params.name}) 
+    }, [route.params.name])
+    
+   
   return (
     <KeyboardAvoidingView 
   behavior={Platform.OS === "ios" ? "padding" : "height"}
