@@ -8,8 +8,10 @@ import { KeyboardAvoidingView } from 'react-native'
 import { Platform } from 'react-native'
 import InputBox from '../components/InputBox'
 import { useNavigation, useRoute } from '@react-navigation/native'
+import { useEffect } from 'react'
 const ChatsScreen = () => {
     const route = useRoute();
+    console.log(route)
     const navigation= useNavigation();
     useEffect(() => {
         navigation.setOptions({title: route.params.name}) 

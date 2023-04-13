@@ -15,7 +15,7 @@ const ContactListItem = ({user}) => {
         <Text style={styles.name} numberOfLines={1}>
             {user.name}
         </Text>
-       <Text numberOfLines={2} style={styles.subTitle}>{chat.lastMessage.text}</Text>
+       <Text numberOfLines={2} style={styles.subTitle}>{user.status}</Text>
         </View>
     </Pressable>
   )
